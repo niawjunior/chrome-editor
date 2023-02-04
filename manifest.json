@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Chrome Editor",
   "version": "1.0",
-  "description": "A Chrome extension that captures selected text and displays it on a popup.",
+  "description": "A Chrome extension that captures selected text and displays it on editor.",
   "permissions": [
     "tabs",
     "activeTab",
@@ -14,8 +14,8 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_popup": "popup.html",
-    "default_title": "popup content",
+    "default_popup": "editor.html",
+    "default_title": "Chrome Editor",
     "default_icon": {
       "16": "icons/editor-icon16.png"
     }

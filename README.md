@@ -5,3 +5,5 @@
 ![alt text](context-menu.png)
 
 ![alt text](demo.png)
+
+![alt text](popup.png)
