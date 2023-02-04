@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chrome Editor</title>
+    <link rel="stylesheet" href="./css/codemirror.min.css" />
+    <link rel="stylesheet" href="./css/foldgutter.css" />
+    <link rel="stylesheet" href="./css/custom-code-mirror.css" />
+    <link rel="stylesheet" href="./css/dracula.css" />
+    <link rel="stylesheet" href="./css/tailwind.min.css" />
+    <script src="./plugins/codemirror.min.js"></script>
+    <script src="./plugins/brace-fold.js"></script>
+    <script src="./plugins/foldcode.js"></script>
+    <script src="./plugins/foldgutter.js"></script>
+    <script src="./plugins/active-line.js"></script>
+    <script src="./plugins/matchbrackets.js"></script>
+    <script src="./plugins/javascript.min.js"></script>
+    <script src="./plugins/beautify.js"></script>
+  </head>
+  <body class="bg-gray-200 box-border">
+    <h4 class="text-2xl font-bold">Chrome Editor</h4>
+    <div class="main">
+      <div class="container flex box-border min-w-full">
+        <textarea id="code" class="border border-gray-400"></textarea>
+        <div id="output" class="border border-gray-400 p-4"></div>
+      </div>
+      <div class="mt-4">
+        <button id="back-button" class="bg-blue-500 text-white p-2 rounded">
+          Go back
+        </button>
+        <button
+          id="format-button"
+          class="bg-blue-500 text-white p-2 rounded m-2"
+        >
+          Format Code
+        </button>
+        <button id="run-button" class="bg-blue-500 text-white p-2 rounded">
+          Run Code
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="./editor.js"></script>
+  </body>
+  <iframe src="./sandbox.html" id="sandbox" style="display: none"></iframe>
+</html>

@@ -1,0 +1,23 @@
+html {
+  max-width: 100%;
+}
+.CodeMirror {
+  font-family: Arial, monospace;
+  font-size: 14px !important;
+  min-width: 70vw;
+  min-height: calc(100vh - 200px);
+}
+
+#output {
+  min-width: 30vw;
+  min-height: calc(100vh - 200px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100vw;
+  max-width: 100%; /* added */
+}

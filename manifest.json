@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Editor",
+  "version": "1.0",
+  "description": "A Chrome extension that captures selected text and displays it on a popup.",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "contextMenus",
+    "offscreen"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "popup content",
+    "default_icon": {
+      "16": "icons/editor-icon16.png"
+    }
+  },
+  "icons": {
+    "16": "icons/editor-icon16.png"
+  },
+  "host_permissions": ["https://openai.com/*", "*://*/*"],
+  "sandbox": {
+    "pages": ["sandbox.html"]
+  }
+}
