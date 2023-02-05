@@ -1,3 +1,13 @@
+chrome.runtime.onMessage.addListener((request) => {
+  // Check if the message contains the checkbox value
+  if (request.type === "autoRunCheckboxValue") {
+    // Store the checkbox value in the Chrome extension storage
+    chrome.storage.local.set({
+      autoRunCheckboxValue: request.value,
+    });
+  }
+});
+
 async function getTab() {
   const [tab] = await chrome.tabs.query({
     active: true,
@@ -20,9 +30,11 @@ chrome.contextMenus.onClicked.addListener(async function (info) {
   if (info.menuItemId === "editor-menu") {
     let url = await getTab();
     chrome.tabs.create({
-      url: `${chrome.runtime.getURL("editor.html")}?site=${encodeURIComponent(
-        url.url
-      )}&content=${encodeURIComponent(info.selectionText)}`,
+      url: `${chrome.runtime.getURL(
+        "editor.html"
+      )}?content=${encodeURIComponent(
+        info.selectionText
+      )}&site=${encodeURIComponent(url.url)}`,
     });
   }
 });

@@ -20,14 +20,17 @@
     <script src="./plugins/beautify.js"></script>
   </head>
   <body class="bg-gray-200 box-border">
-    <h4 class="text-2xl font-bold">Chrome Editor</h4>
+    <h1 class="text-3xl font-bold text-center text-gray-800 py-2">
+      Chrome Editor
+    </h1>
+
     <div class="main">
       <div class="container flex box-border min-w-full">
         <textarea id="code" class="border border-gray-400"></textarea>
-        <div id="output" class="border border-gray-400 p-4"></div>
+        <div id="output" class="border border-gray-400 result"></div>
       </div>
-      <div class="mt-4 px-4">
-        <button id="back-button" class="bg-blue-500 text-white p-2 rounded">
+      <div class="mt-4 px-4 flex items-center">
+        <button id="back-button" class="bg-red-500 text-white p-2 rounded">
           Go back
         </button>
         <button
@@ -36,9 +39,13 @@
         >
           Format Code
         </button>
-        <button id="run-button" class="bg-blue-500 text-white p-2 rounded">
+        <button id="run-button" class="bg-green-500 text-white p-2 rounded">
           Run Code
         </button>
+        <label class="ml-2 flex">
+          <input type="checkbox" class="form-checkbox" id="auto-run" />
+          <span class="ml-2 text-gray-700">Auto Run</span>
+        </label>
       </div>
     </div>
 

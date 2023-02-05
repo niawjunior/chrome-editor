@@ -1,7 +1,29 @@
 <html>
   <script>
     window.addEventListener("message", async function (event) {
-      event.source.window.postMessage(eval(event.data), event.origin);
+      var log = console.log;
+      var logs = [];
+      console.log = function () {
+        logs.push(...arguments);
+      };
+
+      try {
+        eval(event.data);
+        resultMsg = {
+          result: logs.join("\n"),
+          isError: false,
+        };
+
+        event.source.window.postMessage(resultMsg, event.origin);
+      } catch (error) {
+        resultMsg = {
+          result: error.message,
+          isError: true,
+        };
+        event.source.window.postMessage(resultMsg, event.origin);
+      } finally {
+        console.log = log;
+      }
     });
   </script>
 </html>
