@@ -6,7 +6,7 @@ html {
 }
 .CodeMirror {
   font-family: Arial, monospace;
-  font-size: 14px !important;
+  font-size: 14px;
   min-width: 70vw;
   min-height: calc(100vh - 200px);
 }

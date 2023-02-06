@@ -119,3 +119,19 @@ if (window.codeEditor) {
     }
   });
 }
+
+const fontIncreaseButton = document.querySelector("#font-increase-button");
+const fontDecreaseButton = document.querySelector("#font-decrease-button");
+const codeMirror = document.querySelector(".CodeMirror");
+let fontSize = parseInt(getComputedStyle(codeMirror).fontSize, 10);
+
+fontIncreaseButton.addEventListener("click", () => {
+  console.log("click");
+  fontSize += 2;
+  codeMirror.style.fontSize = `${fontSize}px`;
+});
+
+fontDecreaseButton.addEventListener("click", () => {
+  fontSize -= 2;
+  codeMirror.style.fontSize = `${fontSize}px`;
+});
