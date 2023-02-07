@@ -97,6 +97,7 @@ codeEditor = CodeMirror.fromTextArea(document.querySelector("#code"), {
   lineWrapping: true,
   foldGutter: true,
   styleActiveLine: true,
+  autoCloseBrackets: true,
   gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
 });
 codeEditor.setOption("theme", "dracula");
@@ -126,7 +127,6 @@ const codeMirror = document.querySelector(".CodeMirror");
 let fontSize = parseInt(getComputedStyle(codeMirror).fontSize, 10);
 
 fontIncreaseButton.addEventListener("click", () => {
-  console.log("click");
   fontSize += 2;
   codeMirror.style.fontSize = `${fontSize}px`;
 });
