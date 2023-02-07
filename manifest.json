@@ -1,15 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "Chrome Editor",
+  "name": "Chrome JavaScript Editor",
   "version": "1.0",
   "description": "A Chrome extension that captures selected text and displays it on editor.",
-  "permissions": ["tabs", "scripting", "contextMenus", "offscreen", "storage"],
+  "permissions": ["tabs", "contextMenus", "offscreen", "storage"],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
     "default_popup": "editor.html",
-    "default_title": "Chrome Editor",
+    "default_title": "Chrome JavaScript Editor",
     "default_icon": {
       "16": "icons/editor-icon16.png"
     }
